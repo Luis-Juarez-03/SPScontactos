@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt") // Agregar esto si usas Kotlin
 }
 
 android {
@@ -62,6 +63,19 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
     implementation("androidx.core:core-splashscreen:1.0.1")
     //END SPLASH SCREEN
+
+    //START ROOM
+    // Room components
+    implementation("androidx.room:room-runtime:2.5.0")
+    //implementation("androidx.room:room-compiler:2.5.0")
+
+    // Room Coroutines support
+    implementation("androidx.room:room-ktx:2.5.0")
+
+    // Optional - Testing Room
+    testImplementation("androidx.room:room-testing:2.5.0")
+    //END ROOM
+
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
