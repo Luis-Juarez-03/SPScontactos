@@ -10,6 +10,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        //START SPLASH SCREEN
+        maven(url = "https://jitpack.io")
+        //END SPLASH SCREEN
     }
 }
 
